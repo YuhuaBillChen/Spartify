@@ -30,6 +30,9 @@
 		A96CBA711C532785002FA6F7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA701C532785002FA6F7 /* libz.tbd */; };
 		A96CBA731C53278E002FA6F7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA721C53278E002FA6F7 /* libsqlite3.tbd */; };
 		A96CBA771C533296002FA6F7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA761C533296002FA6F7 /* ParseUI.framework */; };
+		A96CBA791C53BC36002FA6F7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA781C53BC36002FA6F7 /* CoreMotion.framework */; };
+		A96CBA7B1C53D35F002FA6F7 /* JoinPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA7A1C53D35F002FA6F7 /* JoinPartyViewController.swift */; };
+		A9B12A991C53D6BB0021EC48 /* HostPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B12A981C53D6BB0021EC48 /* HostPartyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		A96CBA701C532785002FA6F7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A96CBA721C53278E002FA6F7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A96CBA761C533296002FA6F7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		A96CBA781C53BC36002FA6F7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		A96CBA7A1C53D35F002FA6F7 /* JoinPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinPartyViewController.swift; sourceTree = "<group>"; };
+		A9B12A981C53D6BB0021EC48 /* HostPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostPartyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96CBA791C53BC36002FA6F7 /* CoreMotion.framework in Frameworks */,
 				A96CBA731C53278E002FA6F7 /* libsqlite3.tbd in Frameworks */,
 				A96CBA711C532785002FA6F7 /* libz.tbd in Frameworks */,
 				A96CBA6F1C53277B002FA6F7 /* SystemConfiguration.framework in Frameworks */,
@@ -122,6 +129,7 @@
 		A96CBA1F1C5313D2002FA6F7 = {
 			isa = PBXGroup;
 			children = (
+				A96CBA781C53BC36002FA6F7 /* CoreMotion.framework */,
 				A96CBA721C53278E002FA6F7 /* libsqlite3.tbd */,
 				A96CBA701C532785002FA6F7 /* libz.tbd */,
 				A96CBA761C533296002FA6F7 /* ParseUI.framework */,
@@ -135,7 +143,7 @@
 				A96CBA601C5323F0002FA6F7 /* AudioToolbox.framework */,
 				A96CBA5C1C5323D1002FA6F7 /* Bolts.framework */,
 				A96CBA5D1C5323D1002FA6F7 /* Parse.framework */,
-				A96CBA2A1C5313D2002FA6F7 /* Spartify */,
+				A96CBA2A1C5313D2002FA6F7 /* Sportily */,
 				A96CBA421C5313D3002FA6F7 /* SpartifyTests */,
 				A96CBA4D1C5313D3002FA6F7 /* SpartifyUITests */,
 				A96CBA291C5313D2002FA6F7 /* Products */,
@@ -152,19 +160,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A96CBA2A1C5313D2002FA6F7 /* Spartify */ = {
+		A96CBA2A1C5313D2002FA6F7 /* Sportily */ = {
 			isa = PBXGroup;
 			children = (
 				A96CBA2B1C5313D2002FA6F7 /* AppDelegate.swift */,
 				A96CBA2D1C5313D2002FA6F7 /* ViewController.swift */,
 				9E546DF31C53395000CAE6CA /* 1968081.jpg */,
 				A96CBA2F1C5313D2002FA6F7 /* Main.storyboard */,
+				A96CBA7A1C53D35F002FA6F7 /* JoinPartyViewController.swift */,
 				A96CBA351C5313D2002FA6F7 /* Assets.xcassets */,
 				A96CBA371C5313D2002FA6F7 /* LaunchScreen.storyboard */,
 				A96CBA3A1C5313D2002FA6F7 /* Info.plist */,
 				A96CBA321C5313D2002FA6F7 /* Spartify.xcdatamodeld */,
 				9E546DF51C533BB700CAE6CA /* LoginViewController.swift */,
+				A9B12A981C53D6BB0021EC48 /* HostPartyViewController.swift */,
 			);
+			name = Sportily;
 			path = Spartify;
 			sourceTree = "<group>";
 		};
@@ -321,8 +332,10 @@
 			files = (
 				9E546DF61C533BB700CAE6CA /* LoginViewController.swift in Sources */,
 				A96CBA341C5313D2002FA6F7 /* Spartify.xcdatamodeld in Sources */,
+				A96CBA7B1C53D35F002FA6F7 /* JoinPartyViewController.swift in Sources */,
 				A96CBA2E1C5313D2002FA6F7 /* ViewController.swift in Sources */,
 				A96CBA2C1C5313D2002FA6F7 /* AppDelegate.swift in Sources */,
+				A9B12A991C53D6BB0021EC48 /* HostPartyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="szp-wt-zBd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -16,10 +16,133 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spartify" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsE-lW-7gr">
+                                <rect key="frame" x="139" y="136" width="285" height="63"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uda-9f-uVj">
+                                <rect key="frame" x="213" y="285" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Join Party"/>
+                                <connections>
+                                    <segue destination="hOq-XA-Sc5" kind="show" id="TdP-vd-Xbs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiI-6M-IOy">
+                                <rect key="frame" x="213" y="401" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Host Party"/>
+                                <connections>
+                                    <segue destination="bDD-Sg-QwL" kind="show" id="I0s-l8-dj9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iJP-Wh-Iwl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="302"/>
+        </scene>
+        <!--JoinParty-->
+        <scene sceneID="U7X-Sa-a5y">
+            <objects>
+                <viewController id="hOq-XA-Sc5" userLabel="JoinParty" customClass="JoinPartyViewController" customModule="Spartify" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GkI-rp-kRZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DDW-fQ-gpa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5UG-Bg-Vr1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Are In A Party" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owu-ik-PJF">
+                                <rect key="frame" x="231" y="237" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52W-5F-c0t">
+                                <rect key="frame" x="274" y="402" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Owu-ik-PJF" firstAttribute="centerX" secondItem="5UG-Bg-Vr1" secondAttribute="centerX" id="3gV-7H-uMB"/>
+                            <constraint firstItem="52W-5F-c0t" firstAttribute="centerX" secondItem="5UG-Bg-Vr1" secondAttribute="centerX" id="AvF-Sf-7m0"/>
+                            <constraint firstItem="Owu-ik-PJF" firstAttribute="top" secondItem="GkI-rp-kRZ" secondAttribute="bottom" constant="173" id="Tcz-Rn-Zd4"/>
+                            <constraint firstItem="DDW-fQ-gpa" firstAttribute="top" secondItem="52W-5F-c0t" secondAttribute="bottom" constant="177" id="phK-GC-RKr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="XYZLabel" destination="52W-5F-c0t" id="duk-fz-sOZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feI-41-HEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="297"/>
+        </scene>
+        <!--HostParty-->
+        <scene sceneID="l6c-n7-ubH">
+            <objects>
+                <viewController id="bDD-Sg-QwL" userLabel="HostParty" customClass="HostPartyViewController" customModule="Spartify" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Lb-Oc-kcE"/>
+                        <viewControllerLayoutGuide type="bottom" id="vJ0-VS-pb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZd-bH-WWa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hosting A Party" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC4-Jq-fYP">
+                                <rect key="frame" x="237" y="264" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Motion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HS-Fa-dLN">
+                                <rect key="frame" x="244" y="383" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3HS-Fa-dLN" firstAttribute="centerX" secondItem="VZd-bH-WWa" secondAttribute="centerX" id="M2D-cu-f5r"/>
+                            <constraint firstItem="3HS-Fa-dLN" firstAttribute="centerY" secondItem="VZd-bH-WWa" secondAttribute="centerY" id="QSL-wA-hXN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="XYZLabel" destination="3HS-Fa-dLN" id="U5H-6t-LdF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCx-Me-buC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="990"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m9N-Kc-gMt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="szp-wt-zBd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LAo-z5-asN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tcH-M7-Vu0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5F-xM-wBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="127" y="302"/>
         </scene>

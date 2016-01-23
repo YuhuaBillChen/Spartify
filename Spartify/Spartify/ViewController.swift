@@ -9,10 +9,10 @@
 import UIKit
 import ParseUI
 import Parse
-
+import CoreMotion
 
 class ViewController:UIViewController, PFLogInViewControllerDelegate{
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,7 +43,7 @@ class ViewController:UIViewController, PFLogInViewControllerDelegate{
         self.presentViewController(loginViewController, animated: false, completion: nil)
         
     }
-    
+        
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if (PFUser.currentUser() == nil) {
@@ -51,7 +51,6 @@ class ViewController:UIViewController, PFLogInViewControllerDelegate{
         }
         else{
             presentLoggedInAlert()
-            
             //TODO: Show main screen content
             
         }
