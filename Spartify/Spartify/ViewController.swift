@@ -11,7 +11,7 @@ import ParseUI
 import Parse
 
 
-class ViewController: PFLogInViewController{
+class ViewController:UIViewController, PFLogInViewControllerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,35 @@ class ViewController: PFLogInViewController{
         
     }
     
+    func presentLoggedInAlert() {
+        let alertController = UIAlertController(title: "You're logged in", message: "Welcome to Spartify", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        presentLoggedInAlert()
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if (PFUser.currentUser() == nil) {
+
             let loginViewController = LoginViewController()
-            //loginViewController.delegate = self
+            loginViewController.delegate = self
+
+//            let loginViewController = PFLogInViewController()
+//            loginViewController.delegate = self
+            loginViewController.fields = [.UsernameAndPassword, .LogInButton , .PasswordForgotten, .SignUpButton, .Facebook,  .Twitter]
+            loginViewController.emailAsUsername = true
             self.presentViewController(loginViewController, animated: false, completion: nil)
+        }
+        else{
+            presentLoggedInAlert()
         }
     }
 
