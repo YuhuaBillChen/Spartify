@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A96CBA2C1C5313D2002FA6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA2B1C5313D2002FA6F7 /* AppDelegate.swift */; };
+		A96CBA2E1C5313D2002FA6F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA2D1C5313D2002FA6F7 /* ViewController.swift */; };
+		A96CBA311C5313D2002FA6F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96CBA2F1C5313D2002FA6F7 /* Main.storyboard */; };
+		A96CBA341C5313D2002FA6F7 /* Spartify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA321C5313D2002FA6F7 /* Spartify.xcdatamodeld */; };
+		A96CBA361C5313D2002FA6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96CBA351C5313D2002FA6F7 /* Assets.xcassets */; };
+		A96CBA391C5313D2002FA6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96CBA371C5313D2002FA6F7 /* LaunchScreen.storyboard */; };
+		A96CBA441C5313D3002FA6F7 /* SpartifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA431C5313D3002FA6F7 /* SpartifyTests.swift */; };
+		A96CBA4F1C5313D3002FA6F7 /* SpartifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA4E1C5313D3002FA6F7 /* SpartifyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A96CBA401C5313D3002FA6F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96CBA201C5313D2002FA6F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A96CBA271C5313D2002FA6F7;
+			remoteInfo = Spartify;
+		};
+		A96CBA4B1C5313D3002FA6F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96CBA201C5313D2002FA6F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A96CBA271C5313D2002FA6F7;
+			remoteInfo = Spartify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A96CBA281C5313D2002FA6F7 /* Spartify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spartify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96CBA2B1C5313D2002FA6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A96CBA2D1C5313D2002FA6F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A96CBA301C5313D2002FA6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A96CBA331C5313D2002FA6F7 /* Spartify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spartify.xcdatamodel; sourceTree = "<group>"; };
+		A96CBA351C5313D2002FA6F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A96CBA381C5313D2002FA6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A96CBA3A1C5313D2002FA6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96CBA3F1C5313D3002FA6F7 /* SpartifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96CBA431C5313D3002FA6F7 /* SpartifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartifyTests.swift; sourceTree = "<group>"; };
+		A96CBA451C5313D3002FA6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96CBA4A1C5313D3002FA6F7 /* SpartifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96CBA4E1C5313D3002FA6F7 /* SpartifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartifyUITests.swift; sourceTree = "<group>"; };
+		A96CBA501C5313D3002FA6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A96CBA251C5313D2002FA6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96CBA3C1C5313D3002FA6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96CBA471C5313D3002FA6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A96CBA1F1C5313D2002FA6F7 = {
+			isa = PBXGroup;
+			children = (
+				A96CBA2A1C5313D2002FA6F7 /* Spartify */,
+				A96CBA421C5313D3002FA6F7 /* SpartifyTests */,
+				A96CBA4D1C5313D3002FA6F7 /* SpartifyUITests */,
+				A96CBA291C5313D2002FA6F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A96CBA291C5313D2002FA6F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A96CBA281C5313D2002FA6F7 /* Spartify.app */,
+				A96CBA3F1C5313D3002FA6F7 /* SpartifyTests.xctest */,
+				A96CBA4A1C5313D3002FA6F7 /* SpartifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A96CBA2A1C5313D2002FA6F7 /* Spartify */ = {
+			isa = PBXGroup;
+			children = (
+				A96CBA2B1C5313D2002FA6F7 /* AppDelegate.swift */,
+				A96CBA2D1C5313D2002FA6F7 /* ViewController.swift */,
+				A96CBA2F1C5313D2002FA6F7 /* Main.storyboard */,
+				A96CBA351C5313D2002FA6F7 /* Assets.xcassets */,
+				A96CBA371C5313D2002FA6F7 /* LaunchScreen.storyboard */,
+				A96CBA3A1C5313D2002FA6F7 /* Info.plist */,
+				A96CBA321C5313D2002FA6F7 /* Spartify.xcdatamodeld */,
+			);
+			path = Spartify;
+			sourceTree = "<group>";
+		};
+		A96CBA421C5313D3002FA6F7 /* SpartifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				A96CBA431C5313D3002FA6F7 /* SpartifyTests.swift */,
+				A96CBA451C5313D3002FA6F7 /* Info.plist */,
+			);
+			path = SpartifyTests;
+			sourceTree = "<group>";
+		};
+		A96CBA4D1C5313D3002FA6F7 /* SpartifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A96CBA4E1C5313D3002FA6F7 /* SpartifyUITests.swift */,
+				A96CBA501C5313D3002FA6F7 /* Info.plist */,
+			);
+			path = SpartifyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A96CBA271C5313D2002FA6F7 /* Spartify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A96CBA531C5313D3002FA6F7 /* Build configuration list for PBXNativeTarget "Spartify" */;
+			buildPhases = (
+				A96CBA241C5313D2002FA6F7 /* Sources */,
+				A96CBA251C5313D2002FA6F7 /* Frameworks */,
+				A96CBA261C5313D2002FA6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spartify;
+			productName = Spartify;
+			productReference = A96CBA281C5313D2002FA6F7 /* Spartify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A96CBA3E1C5313D3002FA6F7 /* SpartifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A96CBA561C5313D3002FA6F7 /* Build configuration list for PBXNativeTarget "SpartifyTests" */;
+			buildPhases = (
+				A96CBA3B1C5313D3002FA6F7 /* Sources */,
+				A96CBA3C1C5313D3002FA6F7 /* Frameworks */,
+				A96CBA3D1C5313D3002FA6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A96CBA411C5313D3002FA6F7 /* PBXTargetDependency */,
+			);
+			name = SpartifyTests;
+			productName = SpartifyTests;
+			productReference = A96CBA3F1C5313D3002FA6F7 /* SpartifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A96CBA491C5313D3002FA6F7 /* SpartifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A96CBA591C5313D3002FA6F7 /* Build configuration list for PBXNativeTarget "SpartifyUITests" */;
+			buildPhases = (
+				A96CBA461C5313D3002FA6F7 /* Sources */,
+				A96CBA471C5313D3002FA6F7 /* Frameworks */,
+				A96CBA481C5313D3002FA6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A96CBA4C1C5313D3002FA6F7 /* PBXTargetDependency */,
+			);
+			name = SpartifyUITests;
+			productName = SpartifyUITests;
+			productReference = A96CBA4A1C5313D3002FA6F7 /* SpartifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A96CBA201C5313D2002FA6F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = pennapps;
+				TargetAttributes = {
+					A96CBA271C5313D2002FA6F7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					A96CBA3E1C5313D3002FA6F7 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A96CBA271C5313D2002FA6F7;
+					};
+					A96CBA491C5313D3002FA6F7 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A96CBA271C5313D2002FA6F7;
+					};
+				};
+			};
+			buildConfigurationList = A96CBA231C5313D2002FA6F7 /* Build configuration list for PBXProject "Spartify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A96CBA1F1C5313D2002FA6F7;
+			productRefGroup = A96CBA291C5313D2002FA6F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A96CBA271C5313D2002FA6F7 /* Spartify */,
+				A96CBA3E1C5313D3002FA6F7 /* SpartifyTests */,
+				A96CBA491C5313D3002FA6F7 /* SpartifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A96CBA261C5313D2002FA6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96CBA391C5313D2002FA6F7 /* LaunchScreen.storyboard in Resources */,
+				A96CBA361C5313D2002FA6F7 /* Assets.xcassets in Resources */,
+				A96CBA311C5313D2002FA6F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96CBA3D1C5313D3002FA6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96CBA481C5313D3002FA6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A96CBA241C5313D2002FA6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96CBA341C5313D2002FA6F7 /* Spartify.xcdatamodeld in Sources */,
+				A96CBA2E1C5313D2002FA6F7 /* ViewController.swift in Sources */,
+				A96CBA2C1C5313D2002FA6F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96CBA3B1C5313D3002FA6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96CBA441C5313D3002FA6F7 /* SpartifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96CBA461C5313D3002FA6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96CBA4F1C5313D3002FA6F7 /* SpartifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A96CBA411C5313D3002FA6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A96CBA271C5313D2002FA6F7 /* Spartify */;
+			targetProxy = A96CBA401C5313D3002FA6F7 /* PBXContainerItemProxy */;
+		};
+		A96CBA4C1C5313D3002FA6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A96CBA271C5313D2002FA6F7 /* Spartify */;
+			targetProxy = A96CBA4B1C5313D3002FA6F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A96CBA2F1C5313D2002FA6F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A96CBA301C5313D2002FA6F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A96CBA371C5313D2002FA6F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A96CBA381C5313D2002FA6F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A96CBA511C5313D3002FA6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A96CBA521C5313D3002FA6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A96CBA541C5313D3002FA6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spartify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennapps.Spartify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A96CBA551C5313D3002FA6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spartify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennapps.Spartify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A96CBA571C5313D3002FA6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SpartifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennapps.SpartifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spartify.app/Spartify";
+			};
+			name = Debug;
+		};
+		A96CBA581C5313D3002FA6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SpartifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennapps.SpartifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spartify.app/Spartify";
+			};
+			name = Release;
+		};
+		A96CBA5A1C5313D3002FA6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SpartifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennapps.SpartifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Spartify;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A96CBA5B1C5313D3002FA6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SpartifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennapps.SpartifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Spartify;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A96CBA231C5313D2002FA6F7 /* Build configuration list for PBXProject "Spartify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96CBA511C5313D3002FA6F7 /* Debug */,
+				A96CBA521C5313D3002FA6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A96CBA531C5313D3002FA6F7 /* Build configuration list for PBXNativeTarget "Spartify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96CBA541C5313D3002FA6F7 /* Debug */,
+				A96CBA551C5313D3002FA6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A96CBA561C5313D3002FA6F7 /* Build configuration list for PBXNativeTarget "SpartifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96CBA571C5313D3002FA6F7 /* Debug */,
+				A96CBA581C5313D3002FA6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A96CBA591C5313D3002FA6F7 /* Build configuration list for PBXNativeTarget "SpartifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96CBA5A1C5313D3002FA6F7 /* Debug */,
+				A96CBA5B1C5313D3002FA6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A96CBA321C5313D2002FA6F7 /* Spartify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A96CBA331C5313D2002FA6F7 /* Spartify.xcdatamodel */,
+			);
+			currentVersion = A96CBA331C5313D2002FA6F7 /* Spartify.xcdatamodel */;
+			path = Spartify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A96CBA201C5313D2002FA6F7 /* Project object */;
+}
