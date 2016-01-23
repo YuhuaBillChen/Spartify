@@ -18,6 +18,8 @@ class JoinPartyViewController: UIViewController {
     @IBOutlet weak var XYZLabel: UILabel!
     
     func motionInit(){
+                    let connection = Connection()
+                    connection.joinParty("LEFT")
         if manager.deviceMotionAvailable {
             let _:CMAccelerometerData!
             let _:NSError!

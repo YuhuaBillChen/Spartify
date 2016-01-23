@@ -50,6 +50,9 @@ class ViewController:UIViewController, PFLogInViewControllerDelegate{
             createLoginViewController()
         }
         else{
+            //            let connection = Connection()
+            //            connection.createParty("LEFT")
+            //            connection.joinParty("LEFT")
             presentLoggedInAlert()
             //TODO: Show main screen content
             

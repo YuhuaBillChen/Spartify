@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9E546DF41C53395000CAE6CA /* 1968081.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E546DF31C53395000CAE6CA /* 1968081.jpg */; };
 		9E546DF61C533BB700CAE6CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E546DF51C533BB700CAE6CA /* LoginViewController.swift */; };
+		9E546DFA1C53F04900CAE6CA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E546DF91C53F04900CAE6CA /* Connection.swift */; };
 		A96CBA2C1C5313D2002FA6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA2B1C5313D2002FA6F7 /* AppDelegate.swift */; };
 		A96CBA2E1C5313D2002FA6F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CBA2D1C5313D2002FA6F7 /* ViewController.swift */; };
 		A96CBA311C5313D2002FA6F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96CBA2F1C5313D2002FA6F7 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		9E546DF31C53395000CAE6CA /* 1968081.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1968081.jpg; sourceTree = "<group>"; };
 		9E546DF51C533BB700CAE6CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9E546DF91C53F04900CAE6CA /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		A96CBA281C5313D2002FA6F7 /* Spartify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spartify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96CBA2B1C5313D2002FA6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96CBA2D1C5313D2002FA6F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				A96CBA321C5313D2002FA6F7 /* Spartify.xcdatamodeld */,
 				9E546DF51C533BB700CAE6CA /* LoginViewController.swift */,
 				A9B12A981C53D6BB0021EC48 /* HostPartyViewController.swift */,
+				9E546DF91C53F04900CAE6CA /* Connection.swift */,
 			);
 			name = Sportily;
 			path = Spartify;
@@ -336,6 +339,7 @@
 				A96CBA2E1C5313D2002FA6F7 /* ViewController.swift in Sources */,
 				A96CBA2C1C5313D2002FA6F7 /* AppDelegate.swift in Sources */,
 				A9B12A991C53D6BB0021EC48 /* HostPartyViewController.swift in Sources */,
+				9E546DFA1C53F04900CAE6CA /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,9 @@ class HostPartyViewController: UIViewController {
     
     @IBOutlet weak var XYZLabel: UILabel!
     func motionInit(){
+                    let connection = Connection()
+                    connection.createParty("LEFT")
+        
         if manager.deviceMotionAvailable {
             let _:CMAccelerometerData!
             let _:NSError!
