@@ -27,6 +27,7 @@
 		A96CBA6F1C53277B002FA6F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA6E1C53277B002FA6F7 /* SystemConfiguration.framework */; };
 		A96CBA711C532785002FA6F7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA701C532785002FA6F7 /* libz.tbd */; };
 		A96CBA731C53278E002FA6F7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA721C53278E002FA6F7 /* libsqlite3.tbd */; };
+		A96CBA771C533296002FA6F7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96CBA761C533296002FA6F7 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		A96CBA6E1C53277B002FA6F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A96CBA701C532785002FA6F7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A96CBA721C53278E002FA6F7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A96CBA761C533296002FA6F7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				A96CBA611C5323F0002FA6F7 /* AudioToolbox.framework in Frameworks */,
 				A96CBA5F1C5323D1002FA6F7 /* Parse.framework in Frameworks */,
 				A96CBA5E1C5323D1002FA6F7 /* Bolts.framework in Frameworks */,
+				A96CBA771C533296002FA6F7 /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +120,7 @@
 			children = (
 				A96CBA721C53278E002FA6F7 /* libsqlite3.tbd */,
 				A96CBA701C532785002FA6F7 /* libz.tbd */,
+				A96CBA761C533296002FA6F7 /* ParseUI.framework */,
 				A96CBA6E1C53277B002FA6F7 /* SystemConfiguration.framework */,
 				A96CBA6C1C532775002FA6F7 /* StoreKit.framework */,
 				A96CBA6A1C53276D002FA6F7 /* Security.framework */,
