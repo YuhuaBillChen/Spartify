@@ -9,14 +9,21 @@
 import UIKit
 import Parse
 import CoreMotion
+import Foundation
+import AudioToolbox
 
 
 class JoinPartyViewController: UIViewController {
 
     let manager = CMMotionManager()
-    let GRAVITY_MARGIN = 0.2
+    
+    let SEQ_LENGTH = 4
+    let GRAVITY_MARGIN = 0.25
     let ACCELE_TRH = 0.2
+    let DELAY_TRH = 50
+    
     var delayCounter = 0
+    var parseCounter = 0
     var sucessfullyChangStatus = false
     var currentState = "Normal"
     
@@ -25,36 +32,49 @@ class JoinPartyViewController: UIViewController {
     var hostObj:PFUser!
     var guestObj:PFObject!
     
+
+    var isFinishedSeq = true
+    var partySeqArray = [String]()
+    var seqArray = [String]()
+    
+    var settingSeqNo = -1
+    
     @IBOutlet weak var XYZLabel: UILabel!
     @IBOutlet weak var leavePartyButton: UIButton!
-
+    @IBOutlet weak var partySeqLabel: UILabel!
+    @IBOutlet weak var yourSeqLabel: UILabel!
+    
     func changeMotionStatus(gx:Double,ax:Double,gy:Double,ay:Double,gz:Double,az:Double){
-        if (delayCounter > 50){
-            if (gx < (-1+self.GRAVITY_MARGIN) && ax < -self.ACCELE_TRH*2 ){
+        if (delayCounter > DELAY_TRH){
+            if (gx < (-1+self.GRAVITY_MARGIN) && abs(ax) + abs(ay) + abs(az) > self.ACCELE_TRH*3 ){
                 self.currentState = "Left"
                 self.sucessfullyChangStatus = true
                 self.delayCounter = 0
             }
-            else if (gx > (1-self.GRAVITY_MARGIN) && ax > self.ACCELE_TRH*2){
+            else if (gx > (1-self.GRAVITY_MARGIN) && abs(ax) + abs(ay) + abs(az) > self.ACCELE_TRH*3){
                 self.currentState = "Right"
                 self.sucessfullyChangStatus = true
                 self.delayCounter = 0
             }
-            else if (gz < (-1+self.GRAVITY_MARGIN) && az < -self.ACCELE_TRH ){
-                self.currentState = "Frontward"
+            else if (gz < (-1+self.GRAVITY_MARGIN) && abs(ax) + abs(ay) + abs(az) > self.ACCELE_TRH*3 ){
+                self.currentState = "Forward"
                 self.sucessfullyChangStatus = true
                 self.delayCounter = 0
             }
-            else if (gz > (1-self.GRAVITY_MARGIN) && az > self.ACCELE_TRH){
+            else if (gz > (1-self.GRAVITY_MARGIN) && abs(ax) + abs(ay) + abs(az) > self.ACCELE_TRH*3){
                 self.currentState = "Backward"
                 self.sucessfullyChangStatus = true
                 self.delayCounter = 0
             }
-            else if (gy < (-1+self.GRAVITY_MARGIN) && ay < -self.ACCELE_TRH ||
-                gy > (1-self.GRAVITY_MARGIN) && ay > self.ACCELE_TRH){
-                    self.currentState = "Tiltting"
-                    self.sucessfullyChangStatus = true
-                    self.delayCounter = 0
+            else if (abs(gx) < (self.GRAVITY_MARGIN) && abs(gz) < self.GRAVITY_MARGIN && gy < -(1-self.GRAVITY_MARGIN) && (abs(ax) + abs(ay) + abs(az)) > self.ACCELE_TRH*3){
+                self.currentState = "Up"
+                self.sucessfullyChangStatus = true
+                self.delayCounter = 0
+            }
+            else if (abs(gx) < (self.GRAVITY_MARGIN) && abs(gz) < self.GRAVITY_MARGIN && gy > (1-self.GRAVITY_MARGIN) && (abs(ax) + abs(ay) + abs(az)) > self.ACCELE_TRH*3){
+                self.currentState = "Down"
+                self.sucessfullyChangStatus = true
+                self.delayCounter = 0
             }
             else{
                 if (self.currentState != "Normal"){
@@ -65,13 +85,100 @@ class JoinPartyViewController: UIViewController {
         }
     }
     
+    func changeBackground(){
+        if (self.currentState == "Normal"){
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
+        else if (self.currentState == "Left"){
+            self.view.backgroundColor = UIColor.redColor()
+        }
+        else if (self.currentState == "Right"){
+            self.view.backgroundColor = UIColor.greenColor()
+        }
+        else if (self.currentState == "Up"){
+            self.view.backgroundColor = UIColor.orangeColor()
+        }
+        else if (self.currentState == "Down"){
+            self.view.backgroundColor = UIColor.purpleColor()
+        }
+        else if (self.currentState == "Forward"){
+            self.view.backgroundColor = UIColor.blueColor()
+        }
+        else if (self.currentState == "Backward"){
+            self.view.backgroundColor = UIColor.yellowColor()
+        }
+        else{
+            self.view.backgroundColor = UIColor.grayColor()
+        }
+    }
+    
+    func vibrate(){
+        AudioToolbox.AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+    }
+    
+    func beep(){
+        AudioToolbox.AudioServicesPlaySystemSound(1109)
+    }
+    
+    func addSeqUpdater(){
+        if (!isFinishedSeq){
+            if (self.settingSeqNo < self.SEQ_LENGTH ){
+                self.addOneSeq(self.currentState)
+                self.delayCounter = -DELAY_TRH
+                vibrate()
+                if ( self.settingSeqNo == self.SEQ_LENGTH ){
+                    if (self.seqArray == self.partySeqArray){
+                        self.setSeqEnd();
+                    }
+                    else{
+                        setSeqStart()
+                    }
+                }
+            }
+        }
+    }
+
+    func partyObjUpdate(){
+        partyObj.fetchIfNeededInBackgroundWithBlock(){
+            (obj: PFObject?, error: NSError?) -> Void in
+            if (error == nil && obj != nil){
+                self.partyObj = obj
+                if (self.isFinishedSeq){
+                    if (obj!["sequence"] != nil && obj!["sequence"].count > 0){
+                        if (obj!["sequence"] as! Array<NSString> != self.partySeqArray){
+                            self.partySeqArray = obj!["sequence"] as! [String]
+                            self.partySeqLabel.text = self.partySeqArray.joinWithSeparator("--->")
+                            self.partySeqLabel.hidden = false
+                            self.isFinishedSeq = false
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     func updateCheck(){
         if (self.sucessfullyChangStatus){
             self.XYZLabel!.text = self.currentState
+            changeBackground()
+            beep()
+            if (self.currentState != "Normal"){
+                addSeqUpdater()
+            }
             self.sucessfullyChangStatus = false;
         }
         else{
             self.delayCounter += 1
+        }
+    }
+    
+    func parseCheck(){
+        if (parseCounter < 100){
+            parseCounter += 1
+        }
+        else{
+            self.partyObjUpdate()
+            parseCounter = 0
         }
     }
     
@@ -88,12 +195,15 @@ class JoinPartyViewController: UIViewController {
                 let x2 = accelerometerData!.userAcceleration.x;
                 let y2 = accelerometerData!.userAcceleration.y;
                 let z2 = accelerometerData!.userAcceleration.z;
-                let dispStr = String(format:"g x: %1.2f, y: %1.2f, z: %1.2f a x: %1.2f y:%1.2f z:%1.2f",x,y,z,x2,y2,z2)
                 self.changeMotionStatus(x,ax:x2,gy:y,ay:y2,gz:z,az:z2);
                 
                 if (self.currentState != "Normal"){
+                    
                 }
                 self.updateCheck()
+                
+                self.parseCheck()
+                let dispStr = String(format:"%s g x: %1.2f, y: %1.2f, z: %1.2f a x: %1.2f y:%1.2f z:%1.2f",self.currentState, x,y,z,x2,y2,z2)
                 print(dispStr)
                 
             })
@@ -130,6 +240,34 @@ class JoinPartyViewController: UIViewController {
                 self.hostObj = (self.partyObj["userId"])! as! PFUser
             }
         }
+    }
+
+    func setSeqStart(){
+        clearSeq()
+        self.isFinishedSeq = false
+        settingSeqNo = 0
+        self.yourSeqLabel.hidden = false
+        self.yourSeqLabel.text=""
+    }
+    
+    func addOneSeq(motion:String){
+        self.seqArray.append(motion)
+        settingSeqNo = seqArray.count
+        self.yourSeqLabel.hidden = false
+        self.yourSeqLabel.text = seqArray.joinWithSeparator("--->")
+    }
+    
+    func clearSeq(){
+        self.yourSeqLabel.hidden = true
+        self.seqArray.removeAll()
+        self.settingSeqNo = -1
+    }
+    
+    func setSeqEnd(){
+        self.isFinishedSeq = true
+        self.yourSeqLabel.hidden = false
+        self.yourSeqLabel.text = "You've finished this party sequence"
+        settingSeqNo = 0
     }
     
     override func viewDidLoad() {
