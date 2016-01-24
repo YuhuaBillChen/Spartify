@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475303618.238537"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "checkPartySteate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -89,11 +89,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475303618.238537"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "checkPartySteate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -165,7 +165,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/HostPartyViewController.swift"
@@ -233,11 +233,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475303618.238537"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "checkPartySteate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -263,7 +263,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475303618.238537"
+            timestampString = "475307856.471981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "joinParty()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spartify/ViewController.swift"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -279,27 +295,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475303618.238537"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "joinParty()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spartify/ViewController.swift"
-            timestampString = "475303618.238537"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "jumpToJoinParty()"
             landmarkType = "5">
          </BreakpointContent>
@@ -311,11 +311,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475303618.238537"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "checkPartySteate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -339,7 +339,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/JoinPartyViewController.swift"
@@ -352,14 +352,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Spartify.JoinPartyViewController.leavePartyPressed (Spartify.JoinPartyViewController)(__ObjC.UIButton) -&gt; ()"
                   moduleName = "Spartify"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bill/Documents/Works/PennApps2016s/Spartify/Spartify/Spartify/JoinPartyViewController.swift"
-                  timestampString = "475306486.428619"
+                  timestampString = "475307856.580968"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
@@ -367,14 +367,14 @@
                   offsetFromSymbolStart = "84">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Spartify.JoinPartyViewController.(leavePartyPressed (Spartify.JoinPartyViewController) -&gt; (__ObjC.UIButton) -&gt; ()).(closure #1)"
                   moduleName = "Spartify"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bill/Documents/Works/PennApps2016s/Spartify/Spartify/Spartify/JoinPartyViewController.swift"
-                  timestampString = "475306486.42881"
+                  timestampString = "475307856.581246"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
@@ -391,11 +391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475305751.287868"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "checkPartySteate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -407,11 +407,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475305838.427475"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "checkPartySteate()"
             landmarkType = "5">
          </BreakpointContent>
@@ -423,11 +423,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spartify/ViewController.swift"
-            timestampString = "475306023.236726"
+            timestampString = "475307856.471981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "checkPartySteate()"
             landmarkType = "5">
          </BreakpointContent>

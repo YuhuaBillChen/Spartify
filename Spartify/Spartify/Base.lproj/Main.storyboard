@@ -39,13 +39,25 @@
                                     <action selector="createPartyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxd-X4-Mny"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hs-1Z-h3Q">
+                                <rect key="frame" x="273" y="493" width="55" height="30"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmu-dn-omi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6hs-1Z-h3Q" secondAttribute="bottom" constant="77" id="AMo-UH-WnA"/>
+                            <constraint firstItem="6hs-1Z-h3Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZV-Dt-mic"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iJP-Wh-Iwl"/>
                     <connections>
                         <outlet property="hostPartyButton" destination="RiI-6M-IOy" id="kpD-c7-9Tq"/>
                         <outlet property="jointPartyButton" destination="uda-9f-uVj" id="HLy-eG-sqT"/>
+                        <outlet property="logOutButton" destination="6hs-1Z-h3Q" id="3Qx-4L-bTI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

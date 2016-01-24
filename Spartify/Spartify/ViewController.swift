@@ -14,6 +14,7 @@ import CoreMotion
 class ViewController:UIViewController, PFLogInViewControllerDelegate{
     @IBOutlet weak var jointPartyButton: UIButton!
     @IBOutlet weak var hostPartyButton: UIButton!
+    @IBOutlet weak var logOutButton: UIButton!
 
     var userObj = PFUser.currentUser()
     var partyId:PFObject!
@@ -145,6 +146,12 @@ class ViewController:UIViewController, PFLogInViewControllerDelegate{
         self.createParty()
     }
     
+    @IBAction func logOutPressed(sender: AnyObject) {
+        self.disableAllButtons()
+        PFUser.logOut()
+        createLoginViewController()
+    }
+    
     func presentLoggedInAlert() {
         let alertController = UIAlertController(title: "You're logged in", message: "Welcome to Spartify", preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
@@ -163,7 +170,7 @@ class ViewController:UIViewController, PFLogInViewControllerDelegate{
         let loginViewController = LoginViewController()
         loginViewController.delegate = self
         
-        loginViewController.fields = [.UsernameAndPassword, .LogInButton , .PasswordForgotten, .SignUpButton, .Facebook,  .Twitter]
+        loginViewController.fields = [.UsernameAndPassword, .LogInButton , .PasswordForgotten, .SignUpButton]
         loginViewController.emailAsUsername = true
         self.presentViewController(loginViewController, animated: false, completion: nil)
         
