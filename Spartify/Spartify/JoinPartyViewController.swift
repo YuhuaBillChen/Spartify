@@ -33,7 +33,7 @@ class JoinPartyViewController: UIViewController {
     var guestObj:PFObject!
     
 
-    var isFinishedSeq = true
+    var isFinishedSeq = false
     var partySeqArray = [String]()
     var seqArray = [String]()
     
@@ -139,20 +139,19 @@ class JoinPartyViewController: UIViewController {
     }
 
     func partyObjUpdate(){
-        partyObj.fetchIfNeededInBackgroundWithBlock(){
+        partyObj.fetchInBackgroundWithBlock(){
             (obj: PFObject?, error: NSError?) -> Void in
             if (error == nil && obj != nil){
                 self.partyObj = obj
-                if (self.isFinishedSeq){
+                if (self.isFinishedSeq || self.seqArray.count == 0){
                     if (obj!["sequence"] != nil && obj!["sequence"].count > 0){
                         if (obj!["sequence"] as! Array<NSString> != self.partySeqArray){
                             self.partySeqArray = obj!["sequence"] as! [String]
                             self.partySeqLabel.text = self.partySeqArray.joinWithSeparator("--->")
-                            self.partySeqLabel.hidden = false
-                            self.isFinishedSeq = false
+                            self.setSeqStart()
                         }
                     }
-                }
+              }
             }
         }
     }
