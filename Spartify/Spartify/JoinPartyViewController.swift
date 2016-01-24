@@ -147,6 +147,7 @@ class JoinPartyViewController: UIViewController {
                     if (obj!["sequence"] != nil && obj!["sequence"].count > 0){
                         if (obj!["sequence"] as! Array<NSString> != self.partySeqArray){
                             self.partySeqArray = obj!["sequence"] as! [String]
+                            self.partySeqLabel.hidden = false
                             self.partySeqLabel.text = self.partySeqArray.joinWithSeparator("--->")
                             self.setSeqStart()
                         }
