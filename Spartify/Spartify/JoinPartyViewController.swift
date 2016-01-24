@@ -143,7 +143,7 @@ class JoinPartyViewController: UIViewController {
             (obj: PFObject?, error: NSError?) -> Void in
             if (error == nil && obj != nil){
                 self.partyObj = obj
-                if (self.isFinishedSeq || self.seqArray.count == 0){
+                if (self.isFinishedSeq || self.seqArray.count == 0 || self.partySeqArray.count == 0 ){
                     if (obj!["sequence"] != nil && obj!["sequence"].count > 0){
                         if (obj!["sequence"] as! Array<NSString> != self.partySeqArray){
                             self.partySeqArray = obj!["sequence"] as! [String]
